@@ -6,7 +6,7 @@ This app creates renders of the number of rainy days per month in a given area o
 There are several ways to run this app. They are listed below.
 
 ### Online instance of JupyterHub
-The simplest way to run this app is to open an online session of Jupyter notebook or JupyterLab and clone this repository in it. For a quick setup and demonstration, follow [this link](https://noto.epfl.ch/hub/user-redirect/git-pull?repo=https://github.com/Soni-Sona/rainy_days.git&urlpath=lab/tree/rainy-days/main.ipynb&branch=main).
+The simplest way to run this app is to open an online session of Jupyter notebook or JupyterLab and clone this repository in it. For a quick setup and demonstration, follow [this link](https://noto.epfl.ch/hub/user-redirect/git-pull?repo=https://github.com/Soni-Sona/rainy_days.git&urlpath=lab/tree/rainy_days.git/main.ipynb&branch=main).
 
 ### Setup a virtualenv (Linux or WSL)
 This method can be performed on your local computer and will not affect your current Python installation. Clone this repository
