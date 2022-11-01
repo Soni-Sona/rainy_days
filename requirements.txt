@@ -1,0 +1,5 @@
+jupyterlab
+earthengine-api
+pyshp
+matplotlib
+ipympl
