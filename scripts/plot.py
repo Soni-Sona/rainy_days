@@ -1,3 +1,6 @@
+"""Creation of the interactive plot."""
+
+
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 
@@ -11,6 +14,13 @@ plot_map = None
 
 
 def show_interactive():
+    """Shows an interactive plot of the 12 available rasters.
+
+    This only works in an interactive environnement, such as an IPython
+    notebook. The exported rasters are used for the plot. A blank image is
+    shown when no raster is available for the requested month.
+    """
+
     global plot_map
     fig, ax = plt.subplots()
     fig.subplots_adjust(bottom=0.25)
@@ -35,6 +45,17 @@ def show_interactive():
 
 
 def load_raster(month):
+    """Loads a raster for the interactive plot.
+
+    If the raster does not exist, returns an empty image.
+
+    Args:
+        month (int): Requested month, between 1 and 12.
+
+    Returns:
+        Data that can be displayed by plt.imshow.
+    """
+
     try:
         map = plt.imread(utils.get_raster_filename(month))
     except FileNotFoundError:
@@ -43,6 +64,8 @@ def load_raster(month):
 
 
 def update(month):
+    """Updates the interactive plots when moving the slider."""
+
     plot_map.set_data(load_raster(month))
     fig.canvas.draw_idle()
 
