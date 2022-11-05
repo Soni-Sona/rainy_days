@@ -63,7 +63,14 @@ def generate_tif(reduced_images, scale):
 
 
 def generate_image_template(reduced_images, extension, get_url_func):
-    """Template function for generate_png and generate_tif."""
+    """Template function for generate_png and generate_tif.
+
+    Args:
+        reduced_images (list of 12 ee.Image): Output from
+            scripts.compute.compute_reduced_images.
+        extension (str): Extension for saving, ex: "png"
+        get_url_func (function): Gives url from ee.Image.
+    """
 
     for i in range(12):
         image = reduced_images[i]
