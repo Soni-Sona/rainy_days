@@ -3,8 +3,8 @@
 
 from scripts.constants import *
 
-def get_raster_filename(month):
+def get_raster_filename(month, extension="png"):
     """Generates the file path of the requested raster."""
 
-    return SAVE_DIR + "{:02d}.png".format(month)
+    return SAVE_DIR + "{:02d}.".format(month) + extension
 

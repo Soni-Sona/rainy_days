@@ -93,6 +93,11 @@ def generate_previews(size):
     raster.generate_png(reduced_images, size)
 
 
+def generate_rasters(scale):
+    """Alias for scripts.raster.generate_tif."""
+
+    raster.generate_tif(reduced_images, scale)
+
 
 def show_interactive_plot():
     """Alias for scripts.plot.show_interactive."""
