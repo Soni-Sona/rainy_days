@@ -7,13 +7,16 @@ An area of interest must be imported before generating the rasters.
 Finally, the rasters can be visualized interactively in a Jupyter notebook.
 
 Example of usage (in jupyterlab):
+
     import scripts.app as app
     %matplotlib widget
+
     app.load_area_of_interest()
     app.check_output_dir()
-    app.color.set_colormap("Blues")
     app.compute_reduced_images(year=2021)
     app.generate_rasters(scale=1000)
+
+    app.color.set_colormap("Blues")
     app.generate_previews(size=512)
     app.show_interactive_plot()
 """
