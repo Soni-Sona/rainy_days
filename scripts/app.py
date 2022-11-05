@@ -82,11 +82,11 @@ def set_colormap(mpl_name):
     color.set_colormap(mpl_name)
 
 
-def compute_reduced_images(year):
+def compute_reduced_images(year_start, year_end):
     """Computes reduced images for the given year."""
 
     global reduced_images
-    reduced_images = compute.compute_reduced_images(dataset, year, region)
+    reduced_images = compute.compute_reduced_images(dataset, year_start, year_end, region)
 
 
 def generate_previews(size):

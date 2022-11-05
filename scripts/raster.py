@@ -69,13 +69,9 @@ def generate_image_template(reduced_images, extension, get_url_func):
         image = reduced_images[i]
         filename = utils.get_raster_filename(i + 1, extension)
 
-        if len(image.bandNames().getInfo()) == 0: # no data
-            system(f"rm {filename} 2> /dev/null") # quiet rm
-
-        else:
-            print(f"{i}/12", end="\r")
-            url = get_url_func(image)
-            urllib.request.urlretrieve(url, filename)
+        print(f"{i}/12", end="\r")
+        url = get_url_func(image)
+        urllib.request.urlretrieve(url, filename)
 
     print("Done.")
 
