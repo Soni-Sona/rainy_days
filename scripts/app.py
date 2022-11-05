@@ -12,7 +12,9 @@ Example of usage (in jupyterlab):
     app.load_area_of_interest()
     app.check_output_dir()
     app.color.set_colormap("Blues")
-    app.generate_rasters(year=2021)
+    app.compute_reduced_images(year=2021)
+    app.generate_rasters(scale=1000)
+    app.generate_previews(size=512)
     app.show_interactive_plot()
 """
 
