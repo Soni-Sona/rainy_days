@@ -31,6 +31,7 @@ import scripts.plot    as plot
 # Global variables
 dataset = None
 region  = None
+reduced_images = []
 
 
 # Initialize
@@ -79,21 +80,18 @@ def set_colormap(mpl_name):
     color.set_colormap(mpl_name)
 
 
-def set_raster_size(size):
-    """Alias for scripts.raster.set_size."""
+def compute_reduced_images(year):
+    """Computes reduced images for the given year."""
 
-    raster.set_size(size)
-
-
-def generate_rasters(year):
-    """Computes and saves rasters for the provided year.
-
-    As the generation of rasters takes time, the current progression is
-    printed.
-    """
-
+    global reduced_images
     reduced_images = compute.compute_reduced_images(dataset, year, region)
-    raster.save_rasters(reduced_images)
+
+
+def generate_previews(size):
+    """Alias for scripts.raster.generate_png."""
+
+    raster.generate_png(reduced_images, size)
+
 
 
 def show_interactive_plot():
