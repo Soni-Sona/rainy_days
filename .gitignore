@@ -3,3 +3,7 @@ env
 __pycache__
 rasters
 
+_build
+_static
+_template
+
